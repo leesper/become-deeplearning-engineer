@@ -205,12 +205,12 @@ class DDPG():
 
         # Replay memory
         self.buffer_size = 100000
-        self.batch_size = 64    #changed from 64 to 40 as suggested by reviewer
+        self.batch_size = 64    #changed from 64 to 40
         self.memory = ReplayBuffer(self.buffer_size, self.batch_size)
 
         # Algorithm parameters
-        self.gamma = 0.96  # discount factor  - Lillicrap 0.99, 1.0 from reviewer
-        self.tau = 0.005  # for soft update of target parameters (0.001 from Lillicrap) (0.01 suggested by reviewer)
+        self.gamma = 0.96  # discount factor  - Lillicrap
+        self.tau = 0.005  # for soft update of target parameters (0.001 from Lillicrap)
 
     def reset_episode(self):
         self.noise.reset()
